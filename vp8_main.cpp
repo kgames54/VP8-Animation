@@ -114,17 +114,6 @@ system(line);
 
 int main(int argc, char *argv[])
 {
-	system("@echo on");
-	for(int i=0; i<33; i++)
-	{
-	if(i < 10)sprintf(num,"000%d",i);
-	if((i > 10) && (i < 100))sprintf(num,"00%d",i);
-	sprintf(line,"ffmpeg.exe -i \"D:\\HPDrivers\\SDHC\\WWII\\beret_soldier\\walk_soldier_beret\\walk_up_soldier_beret_%s.png\" \"D:\\HPDrivers\\SDHC\\externlink\\Release\\output_%d.webp\" 2> bin\\logs.txt",num,i);
-	system(line);
-	}
-	system("@echo success >> bin\\result.txt");
-	system("exit");
-
 	int nCharsRequired = ExtractFilePath (argv[0], NULL, 0);
 	pathApp = new char[nCharsRequired];
 	ExtractFilePath (argv[0], pathApp, nCharsRequired);
